@@ -57,7 +57,7 @@ class RewardController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required|string|max:255',
             'star_cost' => 'required|integer|min:1',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|max:102400',
             'child_ids' => 'required|array|min:1',
             'child_ids.*' => 'exists:children,id',
         ]);
@@ -123,7 +123,7 @@ class RewardController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'sometimes|required|string|max:255',
             'star_cost' => 'sometimes|required|integer|min:1',
-            'image' => 'nullable|image|max:2048',
+            'image' => 'nullable|image|max:102400',
             'child_ids' => 'sometimes|required|array|min:1',
             'child_ids.*' => 'exists:children,id',
         ]);

@@ -142,7 +142,7 @@ class ChildController extends Controller
             'name' => 'sometimes|string|max:255',
             'birthday' => 'sometimes|date',
             'gender' => 'sometimes|in:male,female',
-            'avatar' => 'nullable|image|max:2048',
+            'avatar' => 'nullable|image|max:102400',
         ]);
 
         if ($validator->fails()) {
